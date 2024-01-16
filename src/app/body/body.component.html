@@ -3,79 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dragon Torso</title>
+  <title>Serpent Body</title>
   <style>
     body {
-      background-color: #00bdf7; 
+      background-color: #87CEEB; /* Sky Blue */
       margin: 0;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      min-height: 100vh;
     }
 
-    .dragon {
+    .serpent {
       position: relative;
-      width: 300px;
-      height: 200px;
-      margin: 100px auto;
-      background-color: #8B4513; 
-      border-radius: 50% 50% 0 0;
+      width: 200px;
+      height: 100px;
+      background-color: #00FF00; /* Green */
+      border-radius: 50%;
       overflow: hidden;
     }
 
-    .spikes {
+    .segment {
       position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 10px;
-      height: 50px;
-      background-color: #000;
-      border-radius: 0 0 50% 50%;
+      width: 30px;
+      height: 80px;
+      background-color: #228B22; /* Forest Green */
+      border-radius: 10px;
+      transform-origin: bottom center;
     }
 
-    .tail {
-      position: absolute;
-      width: 20px;
-      height: 100px;
-      background-color: #8B4513; 
-      top: 40px;
-      left: -10px;
-      transform: rotate(-45deg);
-      transform-origin: top right;
+    .segment:nth-child(odd) {
+      transform: scaleY(1.5);
     }
 
-    .leg {
-      position: absolute;
+    .segment:nth-child(even) {
+      transform: scaleY(0.6);
+    }
+
+    .segment:nth-child(3n) {
       width: 40px;
       height: 100px;
-      background-color: #8B4513; 
-      border-radius: 20px 20px 0 0;
+      background-color: #008000; /* Dark Green */
     }
 
-    .front-leg {
-      top: 100px;
-      left: 20px;
-      transform-origin: top center;
-    }
-
-    .back-leg {
-      top: 100px;
-      left: 120px;
-      transform-origin: top center;
-    }
-
-    @keyframes breathe {
-      to {
-        transform: scaleY(1.1);
-      }
+    .segment:nth-child(4n) {
+      width: 20px;
+      height: 60px;
+      background-color: #32CD32; /* Lime Green */
     }
   </style>
 </head>
 <body>
-  <div class="dragon">
-    <div class="spikes"></div>
-    <div class="tail"></div>
-    <div class="leg front-leg"></div>
-    <div class="leg back-leg"></div>
+  <div class="serpent">
+    <div class="segment" style="left: 20%;"></div>
+    <div class="segment" style="left: 40%;"></div>
+    <div class="segment" style="left: 60%;"></div>
+    <div class="segment" style="left: 80%;"></div>
+    <!-- Agrega más segmentos según sea necesario -->
   </div>
 </body>
 </html>
