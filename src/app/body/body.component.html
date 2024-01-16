@@ -1,32 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="body.component.css">
-  <title>Cuerpo de Dragón</title>
+  <title>Dragon Torso</title>
+  <style>
+    body {
+      background-color: #00bdf7; 
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .dragon {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: #8B4513; 
+      border-radius: 50% 50% 0 0;
+      overflow: hidden;
+    }
+
+    .spikes {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 50px;
+      background-color: #000;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .tail {
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background-color: #8B4513; 
+      top: 40px;
+      left: -10px;
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+
+    .leg {
+      position: absolute;
+      width: 40px;
+      height: 100px;
+      background-color: #8B4513; 
+      border-radius: 20px 20px 0 0;
+    }
+
+    .front-leg {
+      top: 100px;
+      left: 20px;
+      transform-origin: top center;
+    }
+
+    .back-leg {
+      top: 100px;
+      left: 120px;
+      transform-origin: top center;
+    }
+
+    @keyframes breathe {
+      to {
+        transform: scaleY(1.1);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="dragon-body">
-    <div class="head">
-      <!-- Partes de la cabeza pueden ir aquí -->
-    </div>
-    <div class="body">
-      <div class="scales"></div>
-      <div class="legs">
-        <div class="leg front left"></div>
-        <div class="leg front right"></div>
-        <div class="leg back left"></div>
-        <div class="leg back right"></div>
-      </div>
-    </div>
-    <div class="tail">
-      <div class="spikes"></div>
-    </div>
-    <div class="wings">
-      <div class="wing left"></div>
-      <div class="wing right"></div>
-    </div>
+  <div class="dragon">
+    <div class="spikes"></div>
+    <div class="tail"></div>
+    <div class="leg front-leg"></div>
+    <div class="leg back-leg"></div>
   </div>
 </body>
 </html>
