@@ -1,0 +1,101 @@
+body {
+    background-color: #87CEEB; /* Azul cielo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .dragon-head {
+    width: 300px;
+    height: 200px;
+    background-color: #FF4500; /* Naranja */
+    border-radius: 20% 20% 50% 50%;
+    position: relative;
+  }
+  
+  .horns {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    background-color: #333; /* Gris oscuro */
+  }
+  
+  .horn {
+    width: 20px;
+    height: 100%;
+    background-color: #333; /* Gris oscuro */
+    position: absolute;
+    top: 0;
+    border-radius: 10% 10% 50% 50%;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+  .eyes {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .eye {
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Blanco */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+  
+  .pupil {
+    width: 16px;
+    height: 16px;
+    background-color: #000; /* Negro */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .left {
+    left: -50px;
+  }
+  
+  .right {
+    right: -50px;
+  }
+  
+  .mouth {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .teeth {
+    width: 10px;
+    height: 30px;
+    background-color: #fff; /* Blanco */
+    position: absolute;
+  }
+  
+  .top {
+    top: 0;
+  }
+  
+  .bottom {
+    bottom: 0;
+  }
+  
